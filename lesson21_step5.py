@@ -10,7 +10,7 @@ link = ("http://suninjuly.github.io/math.html")
 try:
     browser.get(link)
     x_element = browser.find_element_by_xpath("//span[@id='input_value']")
-    x = x_element.text
+    x = x_element.text #извлечь только текст из переменной
     y = calc(x)
     answer = browser.find_element_by_xpath("//input[@id='answer']")
     answer.send_keys(y)
